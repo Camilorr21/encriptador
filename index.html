@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador-CRR</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <main class="principal">
+        <section class="seccion-uno">
+            <img class="logo" src="./assets/Logo.png" alt="Alura_logo">
+        </section>
+        <section class="seccion-dos">
+            <textarea class="texto-entrada" id="text-input" placeholder="Ingrese el texto aquí"></textarea>
+            <div>
+                <p class="aviso"><img class="aviso_logo" src="./assets/simbolo.png">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="botones">
+                <button class="boton-encriptar" onclick="showEncryptedText();" id="cipher">Encriptar</button>
+                <button class="boton-desencriptar" onclick="showDecryptedText();" id="decipher">Desencriptar</button>
+            </div>
+        </section>
+        <section class="seccion-tres">
+            <div>
+                <img class="imagen" id="image1" src="./assets/Imagen.png" alt="imagen-mensaje">
+                <p class="mensaje1" id="message1">Ningún mensaje fue encontrado</p>
+                <p class="mensaje2" id="message2">Ingresa el texto que deseas encriptar o desencriptar</p>
+            </div>
+            <div>
+                <p class="traduccion" id="result"></p>
+                <button class="boton-copiar" id="copy" hidden onclick="copyText();">Copiar</button>
+            </div>
+            
+        </section>
+    </main>
+    <footer class="baja">
+        <section class="arriba">
+            <p class="nombre">Camilo Rubio</p>
+        </section>
+        <section class="abajo">
+            <a class="boton-git" href="https://github.com/"><img class="logos" src="./assets/github-mark-white.png" alt=""></a>
+            <a class="boton-linkedin" href="https://github.com/Camilorr21"><img class="logos invert-colors" src="./assets/icons8-linkedin-48.png" alt=""></a>
+        </section>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
