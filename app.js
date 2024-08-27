@@ -70,7 +70,8 @@ function showEncryptedText() {
     let encryptedText = cipher(content);
     if (encryptedText) {
         document.getElementById('result').textContent = encryptedText;
-        document.getElementById('copy').removeAttribute('hidden');
+        document.getElementById('result').style.display = 'block'; // Mostrar traducción
+        document.getElementById('copy').style.display = 'block'; // Mostrar botón de copiar
         document.getElementById('image1').style.display = 'none';
         document.getElementById('message1').style.display = 'none';
         document.getElementById('message2').style.display = 'none';
@@ -83,12 +84,14 @@ function showDecryptedText() {
     let decryptedText = decipher(content);
     if (decryptedText) {
         document.getElementById('result').textContent = decryptedText;
-        document.getElementById('copy').removeAttribute('hidden');
+        document.getElementById('result').style.display = 'block'; // Mostrar traducción
+        document.getElementById('copy').style.display = 'block'; // Mostrar botón de copiar
         document.getElementById('image1').style.display = 'none';
         document.getElementById('message1').style.display = 'none';
         document.getElementById('message2').style.display = 'none';
     }
 }
+
 
 // Función de copiar
 function copyText() {
@@ -102,5 +105,4 @@ function copyText() {
         }
     );
 }
-
 
