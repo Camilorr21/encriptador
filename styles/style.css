@@ -132,16 +132,17 @@ body{
     margin-bottom: 2rem;
 }
 
-.traduccion{
+.traduccion {
     color: var(--color-primario);
     font-size: 1.5rem;
     font-weight: 400;
-    height: 40rem; /* Añadido para ajustar la altura */
+    height: 40rem;
     width: 24rem;
-    overflow-y: auto; /* Asegura que el contenido adicional sea accesible mediante scroll */
+    overflow-y: auto;
+    display: none; /* Ocultar por defecto */
 }
 
-.boton-copiar{
+.boton-copiar {
     width: 17.5rem;
     background-color: var(--color-primario);
     text-align: center;
@@ -151,7 +152,9 @@ body{
     font-weight: 400;
     color: var(--color-quinto);
     border: 0.125rem solid var(--color-primario);
+    display: none; /* Ocultar por defecto */
 }
+
 .boton-copiar:hover{
     background-color: var(--color-sexto);
     color: var(--color-primario);
@@ -249,5 +252,4 @@ footer{
         margin-bottom: 1rem; /* Separación entre botones */
     }
 }
-
 
