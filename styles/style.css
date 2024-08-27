@@ -1,38 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-:root{
-    --color-primario:#0A3871;
-    --color-secundario:#495057;
-    --color-terciario:#F3F5FC;
-    --color-cuarto:#343A40;
-    --color-quinto:#FFFFFF;
-    --color-sexto:#D8DFE8;
+:root {
+    --color-primario: #0A3871;
+    --color-secundario: #495057;
+    --color-terciario: #F3F5FC;
+    --color-cuarto: #343A40;
+    --color-quinto: #FFFFFF;
+    --color-sexto: #D8DFE8;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: "Inter", sans-serif;
 }
 
-
-body{
-    background-color:var(--color-terciario);
-    color:var(--color-cuarto);
+body {
+    background-color: var(--color-terciario);
+    color: var(--color-cuarto);
     box-sizing: border-box;
 }
 
-.principal{
+.principal {
     display: flex;
     align-items: flex-start;
 }
 
-.seccion-uno{
+.seccion-uno {
     display: block;
     margin-top: 2.5rem;
 }
 
-.seccion-dos{
+.seccion-dos {
     display: flex;
     width: 38.4rem;
     flex-direction: column;
@@ -40,7 +39,7 @@ body{
     margin-top: 10.5rem;
 }
 
-.texto-entrada{
+.texto-entrada {
     margin-left: 6.25rem;
     width: 36rem;
     height: 31.25rem;
@@ -51,79 +50,89 @@ body{
     resize: none;
     color: var(--color-primario);
 }
-::placeholder{
+
+::placeholder {
     color: var(--color-primario);
 }
+
 .texto-entrada:focus {
     outline: none;
 }
 
-.aviso{
+.aviso {
     color: var(--color-secundario);
     font-size: 0.75rem;
     display: flex;
     margin-left: 6.25rem;
     width: 36.06rem;
 }
-.aviso_logo{
+
+.aviso_logo {
     width: 1rem;
     height: 1rem;
     padding-right: 0.625rem;
 }
 
-.mensaje1{
+.mensaje1 {
     font-size: 1.5rem;
 }
-.mensaje2{
+
+.mensaje2 {
     color: var(--color-secundario);
     font-size: 1rem;
 }
 
-.botones{
+.botones {
     display: flex;
     justify-content: space-between;
     margin-left: 6.25rem;
     width: 40.625rem;
 }
 
-.boton-encriptar{
+/* Estilos generales para los botones */
+.boton-encriptar, .boton-desencriptar, .boton-copiar {
     width: 17.5rem;
     background-color: var(--color-primario);
     text-align: center;
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem;
     border-radius: 1rem;
     font-size: 1rem;
     font-weight: 400;
     color: var(--color-quinto);
     border: 0.125rem solid var(--color-primario);
+    transition: all 0.3s ease; /* Añadir transición para suavizar el cambio de tamaño */
 }
-.boton-encriptar:hover{
+
+/* Estilos cuando el botón está en hover */
+.boton-encriptar:hover, .boton-desencriptar:hover, .boton-copiar:hover {
     background-color: var(--color-sexto);
     color: var(--color-primario);
 }
 
-.boton-desencriptar{
-    width: 17.5rem;
-    background-color: var(--color-sexto);
-    text-align: center;
-    padding: 1.5rem 1.5rem;
-    border-radius: 1rem;
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--color-primario);
-    border: 0.125rem solid var(--color-primario);
+.boton-encriptar {
+    background-color: var(--color-primario);
 }
-.boton-desencriptar:hover{
+
+.boton-encriptar:hover {
+    background-color: var(--color-sexto);
+    color: var(--color-primario);
+}
+
+.boton-desencriptar {
+    background-color: var(--color-sexto);
+}
+
+.boton-desencriptar:hover {
     background-color: var(--color-primario);
     color: var(--color-quinto);
 }
 
-.seccion-tres{
+.seccion-tres {
     width: 25rem;
     height: 45rem;
     background-color: var(--color-quinto);
     text-align: center;
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem;
     border-radius: 1rem;
     font-size: 1rem;
     font-weight: 400;
@@ -143,30 +152,20 @@ body{
 }
 
 .boton-copiar {
-    width: 17.5rem;
-    background-color: var(--color-primario);
-    text-align: center;
-    padding: 1.5rem 1.5rem;
-    border-radius: 1rem;
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--color-quinto);
-    border: 0.125rem solid var(--color-primario);
     display: none; /* Ocultar por defecto */
 }
 
-.boton-copiar:hover{
+.boton-copiar:hover {
     background-color: var(--color-sexto);
     color: var(--color-primario);
 }
 
-.imagen{
+.imagen {
     margin-top: 12.5rem;
-
 }
 
-footer{
-    background-color:var(--color-primario);
+footer {
+    background-color: var(--color-primario);
     padding: 1rem;
     color: var(--color-quinto);
     text-align: center;
@@ -174,7 +173,7 @@ footer{
     font-weight: 400;
 }
 
-.logos{
+.logos {
     width: 2.81rem;
     height: 2.81rem;
     padding-right: 0.625rem;
@@ -184,15 +183,16 @@ footer{
     filter: invert(100%) brightness(1000%);
 }
 
+/* Responsividad para pantallas pequeñas (tabletas y móviles) */
 @media (max-width: 768px) {
     .principal {
         flex-direction: column;
         align-items: center; /* Centrando horizontalmente */
         justify-content: center; /* Centrando verticalmente */
         text-align: center;
-        margin-top: 2rem; /* Añadir margen superior
+        margin-top: 2rem;
     }
-    
+
     .seccion-uno, .seccion-dos, .seccion-tres {
         width: 100%; /* Ocupando todo el ancho */
         margin: 0; /* Eliminando márgenes para centrar */
@@ -203,18 +203,28 @@ footer{
     }
 
     .texto-entrada {
-        width: 80%; /* Ajustando el ancho para pantallas pequeñas */
+        width: 90%; /* Ajustando el ancho para pantallas más pequeñas */
         margin-left: 0;
-        margin-top: 5rem; /* Añadir espacio de 5rem entre logo y texto-entrada */
+        margin-top: 5rem; /* Añadir espacio entre logo y texto-entrada */
     }
 
     .seccion-tres {
+        width: 90%; /* Ocupa casi todo el ancho disponible */
         margin-left: 0;
         margin-top: 2rem;
     }
 
-    .boton-copiar {
-        margin-top: 2rem;
+    .botones {
+        width: 90%;
+        margin-left: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boton-encriptar, .boton-desencriptar, .boton-copiar {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin-bottom: 1rem; /* Añade espacio entre los botones */
+        padding: 1rem; /* Ajusta el padding para reducir el tamaño del botón */
     }
 
     .aviso {
@@ -239,17 +249,16 @@ footer{
     }
 }
 
+/* Responsividad para pantallas muy pequeñas (móviles) */
 @media (max-width: 375px) {
-    .botones {
-        width: 80%;
-        margin-left: 0;
-        flex-direction: column;
-        align-items: center;
+    .boton-encriptar, .boton-desencriptar, .boton-copiar {
+        width: 100%;
+        padding: 0.75rem; /* Reduce aún más el padding para botones más pequeños */
+        font-size: 0.875rem; /* Reduce el tamaño de la fuente */
     }
 
-    .boton-encriptar, .boton-desencriptar {
-        width: 100%;
-        margin-bottom: 1rem; /* Separación entre botones */
+    .botones {
+        width: 100%; /* Asegura que los botones ocupen todo el ancho disponible */
     }
 }
 
